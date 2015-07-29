@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
+  before_action :set_locale
 
   # before_action :authenticate_user!, unless: :pages_controller?
 
@@ -22,5 +23,9 @@ class ApplicationController < ActionController::Base
   def user_not_authorized
     flash[:error] = I18n.t('controllers.application.user_not_authorized', default: "You can't access this page.")
     redirect_to(root_path)
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
   end
 end
