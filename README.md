@@ -1,4 +1,14 @@
-# Www-rails
+# Le Wagon - Home
+
+## Import
+
+To import all the old stuff before the final `CNAME` migration, run:
+
+```bash
+# Suppose you have old stuff at ~/code/lewagon/www-sinatra
+$ cd ~/code/lewagon/www
+$ cp -r ../www-sinatra/posts .
+```
 
 ## Configuration
 
