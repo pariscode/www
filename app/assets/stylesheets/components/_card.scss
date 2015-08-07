@@ -1,0 +1,22 @@
+.card-city {
+  background-color: white;
+  margin: 5px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #E7E5E5;
+}
+.card-city-header {
+  background-color: $blue;
+  height: 100px;
+  background-size: cover;
+  border-radius: 3px 3px 0px 0px;
+}
+.card-city-body {
+  padding: 20px;
+  h3 {
+    font-size: 19px;
+  }
+  p {
+    color: #959494;
+    font-size: 13px;
+  }
+}

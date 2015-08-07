@@ -1,1 +1,13 @@
 // Your footer style
+
+#footer {
+  padding: 100px 0;
+  font-weight: 300;
+  color: #CCCCCC;
+  a {
+    color: #AEAEAE;
+    &:hover {
+      color: black;
+    }
+  }
+}

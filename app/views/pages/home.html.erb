@@ -6,10 +6,245 @@
   <%# TODO %>
 <% end %>
 
-<div class="container text-justify">
+<div class="banner banner-gradient text-center" style="background-image: url('<%= image_path('banners/bg-home.jpg')%>')">
+  <div class="banner-gradient-shadow"></div>
+  <div class="banner-content">
+    <h1><%= t(".home.catchline", default: "Changez de vie : apprenez à coder") %></h1>
+    <p>
+      <%= t(".home.vision", default: "Le Wagon apporte un savoir-faire technique aux esprits créatifs") %>
+      <span>
+        <i class="fa fa-play-circle-o"></i> <%= t(".home.view_teaser", default: "Voir la vidéo") %>
+      </span>
+    </p>
+    <%= link_to t(".home.apply_for_nine_weeks", default: "Postulez pour 9 semaines de formation"), apply_path, class: "btn btn-danger btn-lg" %>
+  </div>
+</div>
+
+<div class="container padded">
   <div class="row">
-    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-      <h1><%= t "hello" %></h1>
+    <div class="col-xs-12 col-sm-6">
+      TODO: tchret icons cascade
+    </div>
+    <div class="col-xs-12 col-sm-6">
+      <div class="step">
+        <span class="step-figure">
+          <i class="fa fa-check"></i>
+        </span>
+        <div class="step-description">
+          <h2>
+            <%= t(".home.prepwork", default: "Préparation") %>
+          </h2>
+          <p>
+            <%= t(".home.prepwork_details", default: "Le Wagon demande à chaque élève de valider des tutoriels On-Demand avant de rejoindre le programme.") %>
+          </p>
+        </div>
+      </div>
+      <div class="step">
+        <span class="step-figure">
+          <i class="fa fa-check"></i>
+        </span>
+        <div class="step-description">
+          <h2>
+            <%= t(".home.prepwork", default: "Bootcamp") %>
+          </h2>
+          <p>
+            <%= t(".home.prepwork_details", default: "Le Wagon demande à chaque élève de valider des tutoriels On-Demand avant de rejoindre le programme.") %>
+          </p>
+          <div class="sub-step">
+            <span class="sub-step-figure">
+              <i class="fa fa-check"></i>
+            </span>
+            <h3 class="sub-step-description">
+              <%= t(".home.algorithm", default: "Algorithmie & architecture logicielle") %>
+            </h3>
+          </div>
+          <div class="sub-step">
+            <span class="sub-step-figure">
+              <i class="fa fa-check"></i>
+            </span>
+            <h3 class="sub-step-description">
+              <%= t(".home.web_development", default: "Apprentissage du développement web") %>
+            </h3>
+          </div>
+          <div class="sub-step">
+            <span class="sub-step-figure">
+              <i class="fa fa-check"></i>
+            </span>
+            <h3 class="sub-step-description">
+              <%= t(".home.algorithm", default: "Mindset & culture technique") %>
+            </h3>
+          </div>
+          <div class="sub-step">
+            <span class="sub-step-figure">
+              <i class="fa fa-check"></i>
+            </span>
+            <h3 class="sub-step-description">
+              <%= t(".home.algorithm", default: "Développement produit en 10 jours") %>
+            </h3>
+          </div>
+          <div class="sub-step">
+            <span class="sub-step-figure">
+              <i class="fa fa-check"></i>
+            </span>
+            <h3 class="sub-step-description">
+              <%= t(".home.algorithm", default: "Outils et workflow de Startup") %>
+            </h3>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
+</div>
+
+<div class="bg-black padded">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        <ul class="list-inline">
+          <li>
+            <a href="">
+              <img src="http://placehold.it/100/100" alt="" class="img-circle">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="http://placehold.it/100/100" alt="" class="img-circle">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="http://placehold.it/100/100" alt="" class="img-circle">
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <img src="http://placehold.it/100/100" alt="" class="img-circle">
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <div class="step step-negative">
+          <span class="step-figure">
+            <i class="fa fa-check"></i>
+          </span>
+          <div class="step-description">
+            <h2>
+              <%= t(".home.new_me", default: "Nouveau moi") %>
+            </h2>
+            <p>
+              <%= t(".home.prepwork_details", default: "Le Wagon demande à chaque élève de valider des tutoriels On-Demand avant de rejoindre le programme.") %>
+            </p>
+          </div>
+        </div>
+        <div class="cta text-left padded-small">
+          <%= link_to t(".home.check_program", default: "En savoir plus sur le programme"), program_path, class: "btn btn-danger btn-lg" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container padded">
+  <div class="row">
+    <div class="col-xs-12 col-sm-3">
+      <div class="card-city">
+        <div class="card-city-header"></div>
+        <div class="card-city-body">
+          <h3>Paris</h3>
+          <p>
+            <i class="fa fa-map-marker"></i> prochain départ : janvier 2015
+          </p>
+          <p>
+            <i class="fa fa-calendar"></i> 2 évènements à venir
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="card-city">
+        <div class="card-city-header"></div>
+        <div class="card-city-body">
+          <h3>Brussels</h3>
+          <p>
+            <i class="fa fa-map-marker"></i> prochain départ : janvier 2015
+          </p>
+          <p>
+            <i class="fa fa-calendar"></i> 2 évènements à venir
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="card-city">
+        <div class="card-city-header"></div>
+        <div class="card-city-body">
+          <h3>Los Angeles</h3>
+          <p>
+            <i class="fa fa-map-marker"></i> prochain départ : janvier 2015
+          </p>
+          <p>
+            <i class="fa fa-calendar"></i> 3 évènements à venir
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-3">
+      <div class="card-city">
+        <div class="card-city-header"></div>
+        <div class="card-city-body">
+          <h3>Lille</h3>
+          <p>
+            <i class="fa fa-map-marker"></i> prochain départ : janvier 2015
+          </p>
+          <p>
+            <i class="fa fa-calendar"></i> 2 évènements à venir
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 text-center padded-small">
+      <h2 class="section-header">Nos villes</h2>
+      <p class="text-muted">Monte un Wagon dans ta ville</p>
+    </div>
+  </div>
+</div>
+
+<div class="banner banner-flat" style="background-image: url('<%= image_path('banners/bg-home-secondary.jpg')%>')">
+  <div class="banner-flat-filter banner-flat-filter-green"></div>
+  <div class="banner-content text-center">
+    <%= image_tag "techcrunch.png", width: "60%" %>
+  </div>
+</div>
+
+<div class="bg-black padded" id="stories">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-sm-6">
+        TODO: tchret students cascade
+      </div>
+      <div class="col-xs-12 col-sm-6">
+        <p>
+          Déja 354 entrepreneurs convertis.
+        </p>
+        <p>
+          Et <strong>vous</strong> ?
+        </p>
+        <div class="padded-small">
+          <%= link_to t(".home.check_program", default: "Découvrir nos élèves et leurs projets"), alumni_path, class: "btn btn-danger btn-lg" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container padded text-center">
+  <h2 class="section-header padded-small">News, ressources gratuites & bons plans</h2>
+  <form action="" class="form-inline">
+    <input type="email" class="form-control input-lg" placeholder="Entrez votre e-mail">
+    <input type="submit" class="btn btn-danger btn-lg" value="Restez informé">
+  </form>
+
 </div>
