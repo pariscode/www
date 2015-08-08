@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  # config/static_routes.yml
   STATIC_ROUTES.each do |template, locale_paths|
     locale_paths.each do |locale, page|
       get page => "pages#show", template: template, locale: locale, as: "#{template}_#{locale}".to_sym
@@ -15,12 +16,15 @@ Rails.application.routes.draw do
     get ":city" => "cities#show", city: /#{CITIES.join("|")}|/, as: :city
     resources :projects, only: [:show]
     resources :students, only: [:show]
+    get "blog", to: 'posts#index'
+    get "blog/:slug", to: 'posts#show'
   end
 
   # Blog (TODO)
 
 end
 
+# Create helper for static_routes
 Rails.application.routes.url_helpers.module_eval do
   STATIC_ROUTES.each do |route, _|
     define_method "#{route}_path".to_sym do |args = {}|

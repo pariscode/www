@@ -1,7 +1,11 @@
+require "static"
+
 class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
   before_action :set_locale
+
+  before_action :load_static, if: -> { Rails.env.development? }
 
   # before_action :authenticate_user!, unless: :pages_controller?
 
@@ -27,5 +31,9 @@ class ApplicationController < ActionController::Base
 
   def set_locale
     I18n.locale = params[:locale] || I18n.default_locale
+  end
+
+  def load_static
+    Static.load
   end
 end

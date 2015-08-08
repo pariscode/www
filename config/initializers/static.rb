@@ -1,0 +1,2 @@
+require "static"
+Static.load
