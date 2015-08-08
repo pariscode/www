@@ -32,10 +32,10 @@
         </span>
         <div class="step-description">
           <h2>
-            <%= t(".home.prepwork", default: "Préparation") %>
+            <%= t(".home.prep_work", default: "Préparation") %>
           </h2>
           <p>
-            <%= t(".home.prepwork_details", default: "Le Wagon demande à chaque élève de valider des tutoriels On-Demand avant de rejoindre le programme.") %>
+            <%= t(".home.prep_work_details", default: "Le Wagon demande à chaque élève de valider des tutoriels On-Demand avant de rejoindre le programme.") %>
           </p>
         </div>
       </div>
@@ -45,10 +45,10 @@
         </span>
         <div class="step-description">
           <h2>
-            <%= t(".home.prepwork", default: "Bootcamp") %>
+            <%= t(".home.bootcamp", default: "Bootcamp") %>
           </h2>
           <p>
-            <%= t(".home.prepwork_details", default: "Le Wagon demande à chaque élève de valider des tutoriels On-Demand avant de rejoindre le programme.") %>
+            <%= t(".home.bootcamp_details", default: "Le Wagon demande à chaque élève de valider des tutoriels On-Demand avant de rejoindre le programme.") %>
           </p>
           <div class="sub-step">
             <span class="sub-step-figure">
@@ -71,7 +71,7 @@
               <i class="fa fa-check"></i>
             </span>
             <h3 class="sub-step-description">
-              <%= t(".home.algorithm", default: "Mindset & culture technique") %>
+              <%= t(".home.mindset", default: "Mindset & culture technique") %>
             </h3>
           </div>
           <div class="sub-step">
@@ -79,7 +79,7 @@
               <i class="fa fa-check"></i>
             </span>
             <h3 class="sub-step-description">
-              <%= t(".home.algorithm", default: "Développement produit en 10 jours") %>
+              <%= t(".home.product", default: "Développement d'un produit en 10 jours") %>
             </h3>
           </div>
           <div class="sub-step">
@@ -87,7 +87,7 @@
               <i class="fa fa-check"></i>
             </span>
             <h3 class="sub-step-description">
-              <%= t(".home.algorithm", default: "Outils et workflow de Startup") %>
+              <%= t(".home.tools", default: "Outils et workflow de Startup") %>
             </h3>
           </div>
         </div>
@@ -133,7 +133,7 @@
               <%= t(".home.new_me", default: "Nouveau moi") %>
             </h2>
             <p>
-              <%= t(".home.prepwork_details", default: "Le Wagon demande à chaque élève de valider des tutoriels On-Demand avant de rejoindre le programme.") %>
+              <%= t(".home.new_me_details", default: "Le Wagon demande à chaque élève de valider des tutoriels On-Demand avant de rejoindre le programme.") %>
             </p>
           </div>
         </div>
@@ -206,8 +206,12 @@
   </div>
   <div class="row">
     <div class="col-xs-12 text-center padded-small">
-      <h2 class="section-header">Nos villes</h2>
-      <p class="text-muted">Monte un Wagon dans ta ville</p>
+      <h2 class="section-header">
+        <%= t(".home.our_cities", default: "Nos villes") %>
+      </h2>
+      <p class="text-muted">
+        <%= t(".home.open_yours", default: "Montez un Wagon dans votre ville") %>
+      </p>
     </div>
   </div>
 </div>
@@ -227,13 +231,13 @@
       </div>
       <div class="col-xs-12 col-sm-6">
         <p>
-          Déja 354 entrepreneurs convertis.
+          <%= t(".home.already_a_lot", default: "Déja 354 entrepreneurs convertis.") %>
         </p>
         <p>
-          Et <strong>vous</strong> ?
+          <%= t(".home.and_you", default: "Et <strong>vous</strong> ?") %>
         </p>
         <div class="padded-small">
-          <%= link_to t(".home.check_program", default: "Découvrir nos élèves et leurs projets"), alumni_path, class: "btn btn-danger btn-lg" %>
+          <%= link_to t(".home.check_projects", default: "Découvrir nos élèves et leurs projets"), alumni_path, class: "btn btn-danger btn-lg" %>
         </div>
       </div>
     </div>
@@ -241,10 +245,12 @@
 </div>
 
 <div class="container padded text-center">
-  <h2 class="section-header padded-small">News, ressources gratuites & bons plans</h2>
+  <h2 class="section-header padded-small">
+    <%= t(".home.news_and_resources", default: "News, ressources gratuites & bons plans") %>
+  </h2>
   <form action="" class="form-inline">
-    <input type="email" class="form-control input-lg" placeholder="Entrez votre e-mail">
-    <input type="submit" class="btn btn-danger btn-lg" value="Restez informé">
+    <input type="email" class="form-control input-lg" placeholder="<%= t(".home.enter_your_mail", default: "Entrez votre email") %>">
+    <input type="submit" class="btn btn-danger btn-lg" value="<%= t(".home.stay_tuned", default: "Restez informé") %>">
   </form>
 
 </div>
