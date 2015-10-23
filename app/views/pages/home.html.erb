@@ -124,29 +124,32 @@
     </p>
     <%= render 'shared/map' %>
     <div class="card-cities">
-      <% @cities.each do |city| %>
-        <div class="card-city-container">
-          <%= link_to city_path(city: city["slug"], locale: locale) do %>
-            <div class="card-city">
-              <div class="card-city-header" style="background-image: url('<%= city['pictures']['city']['cover']%>')">
-              <span class="card-city-filter"></span>
-              </div>
-              <div class="card-city-body">
-                <h3><%= city["name"] %></h3>
-                <div class="project-item-makers card-city-teachers">
-                  <% @client.staff(city['slug'])["teachers"].each do |teacher| %>
-                    <% maker = OpenStruct.new maker %>
-                    <div class="project-item-maker">
-                      <a href=<%= "http://alumni.lewagon.org/#{teacher['github_nickname']}" %> target='_blank'>
-                        <img src=<%= teacher['thumbnail'] %> class='avatar' />
-                      </a>
-                    </div>
-                  <% end %>
+      <% Static::CITIES.keys.each do |slug| %>
+        <% city = @cities.find { |c| c["slug"] == slug.to_s } %>
+        <% if city %>
+          <div class="card-city-container">
+            <%= link_to city_path(city: city["slug"], locale: locale) do %>
+              <div class="card-city">
+                <div class="card-city-header" style="background-image: url('<%= city['pictures']['city']['cover']%>')">
+                <span class="card-city-filter"></span>
+                </div>
+                <div class="card-city-body">
+                  <h3><%= city["name"] %></h3>
+                  <div class="project-item-makers card-city-teachers">
+                    <% @client.staff(city['slug'])["teachers"].each do |teacher| %>
+                      <% maker = OpenStruct.new maker %>
+                      <div class="project-item-maker">
+                        <a href=<%= "http://alumni.lewagon.org/#{teacher['github_nickname']}" %> target='_blank'>
+                          <img src=<%= teacher['thumbnail'] %> class='avatar' />
+                        </a>
+                      </div>
+                    <% end %>
+                  </div>
                 </div>
               </div>
-            </div>
-          <% end %>
-        </div>
+            <% end %>
+          </div>
+        <% end %>
       <% end %>
     </div>
   </div>
